@@ -1,0 +1,71 @@
+.flexLoaderOverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.9);
+    color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    animation: flexLoaderOverlayAnimation 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flexLoaderOverlayAnimation {
+    0%   { opacity: 0;   }
+    100% { opacity: 1; }
+}
+
+.flexLoaderSpinnerHolder {
+    height: 70px;
+    position: relative;
+}
+
+.flexLoaderSpinner {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.flexLoaderSpinner:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: flexLoaderSpinnerAnimation 1.2s linear infinite;
+}
+
+@keyframes flexLoaderSpinnerAnimation {
+    0%   { transform: rotate(0deg);   }
+    100% { transform: rotate(360deg); }
+}
+
+.flexLoaderText {
+    margin: 10px;
+    text-align: center;
+    font-size: 125%;
+    margin-top: 30px;
+}
+
+.flexLoaderInsideOverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,106 @@
+.pageContent {
+    flex-direction: row;
+}
+
+.boxSideBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #E8E8E8;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.65);
+}
+
+.boxSideBar .boxVendedor {
+    pointer-events: none;
+}
+
+.boxSideBar .nome {
+    font-size: 130%;
+    margin-top: 10px;
+}
+
+.boxSideBar .email {
+    margin-top: 5px;
+}
+
+.boxSideBar hr {
+    margin: 30px 0;
+}
+
+.boxSideBar .saldoComissao {
+    font-size: 200%;
+    margin-top: 5px;
+}
+
+.boxContent {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.boxContent > * + * {
+    margin-top: 30px;
+}
+
+.boxButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: -20px;
+    margin-top: 20px;
+}
+
+.boxButtons > * + * {
+    margin: 10px;
+}
+
+.boxButtons.right {
+    justify-content: flex-end;
+}
+
+.modalNovaVenda {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.modalNovaVenda form > *:not(.hidden) + * {
+    margin-top: 20px;
+}
+
+.modalNovaVenda button {
+    width: 100%;
+}
+
+table tr td:not(:last-of-type) {
+    min-width: 100px;
+}
+
+table tr td:first-of-type {
+    min-width: 200px;
+}
+
+table tr td:not(:first-of-type) {
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 900px)
+{
+    .pageContent {
+        flex-direction: column;
+    }
+
+    .boxButtons.right {
+        justify-content: center;
+    }
+
+    table tr td {
+        text-align: center !important;
+    }
+}

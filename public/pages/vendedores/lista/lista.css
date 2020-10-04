@@ -1,0 +1,50 @@
+.boxInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    padding: 10px 20px;
+    background-color: #EEEEEE;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.65);
+}
+
+.boxVendedores {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.boxVendedores .dinamic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.modalNovoVendedor {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.modalNovoVendedor form > * + * {
+    margin-top: 20px;
+}
+
+.modalNovoVendedor button {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 900px)
+{
+    .boxVendedor {
+        flex: 1 1 250px;
+    }
+}
